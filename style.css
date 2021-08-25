@@ -10,15 +10,16 @@ body {
   box-sizing: border-box;
   font-family: "Space Mono";
   font-size: 24px;
+  overflow-x: hidden;
 }
 header {
   font-family: "Inconsolata";
-  font-size: 24px;
-  font-weight: 700;
   padding: 0px 77px;
 }
 
-main {
+.header-title {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .container {
@@ -27,9 +28,6 @@ main {
   gap: 123.78px;
   padding: 200px 119px 400px 77px;
   align-items: center;
-}
-
-.container-image {
 }
 
 .image {
@@ -66,11 +64,34 @@ main {
 }
 
 @media only screen and (max-width: 1100px) {
-  .header {
+  header {
     padding: 0px 24px;
   }
 
-  container {
+  .container {
     grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 60px;
+  }
+
+  @media only screen and (max-width: 650px) {
+    .header-title {
+      font-size: 24px;
+    }
+
+    .container {
+      padding: 83px 24px 155px 24px;
+    }
+
+    .info-title {
+      font-size: 40px;
+      width: 13ch;
+      justify-content: center;
+    }
+
+    .info-excerpt {
+      font-size: 18px;
+      width: 28ch;
+    }
   }
 }
